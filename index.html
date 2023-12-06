@@ -23,6 +23,9 @@
             background-color: white;
             padding: 7px;
             border-radius: 7px;
+            position: relative;
+            top: 10px;
+            margin-bottom: 7px;
         }
 
         .sub-title {
@@ -43,6 +46,64 @@
             border-radius: 0 25px 0 25px;
             padding: 2px 18px;
         }
+
+        /* Scrollig started */
+        /* Style for the scrolling container */
+        .scroll-container {
+            position: relative;
+            /* left: 577px; */
+            top: 5px;
+            overflow: hidden;
+            white-space: nowrap;
+            /* background-color: #c00020; */
+            width: 800px;
+            height: 30px;
+            /* border-left: 10px solid #c00020; */
+            /* border-right: 10px solid #c00020; */
+            /* border-radius: 3px; */
+        }
+
+        .scroll-container:hover .scroll-text {
+            animation-play-state: paused;
+        }
+
+        /* Style for the scrolling text */
+        .scroll-text {
+            font-size: 1.2vw;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: flex;
+            /* padding: 10px; */
+            animation: scrollText 40s linear infinite;
+            /* Adjust the speed by changing the duration (20s in this example) */
+        }
+
+        .scroll-text p {
+            /* margin-top: 13px; */
+            /* margin-right: 50px; */
+            /* line-height: 4px; */
+        }
+
+        .scroll-text a {
+            text-decoration: none;
+            /* color: #13077A; */
+            /* color: #fff; */
+            color: #fff;
+            /* font-family: 'Roboto', serif; */
+        }
+
+        /* Animation for scrolling text */
+        @keyframes scrollText {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Scrollig end */
     </style>
 </head>
 
@@ -73,7 +134,23 @@
                                     <a href="#">Resources</a>
                                 </div>
                                 <div class="col-lg-12">
-                                    <p style="color: #fff;"><i class="fa fa-phone"></i>&nbsp;&nbsp;+91 - 94384
+                                    <!-- Container for the scrolling text -->
+                                    <div class="scroll-container">
+                                        <!-- Scrolling text with multiple headlines -->
+                                        <div class="scroll-text">
+                                            <a class="mx-3" href="#">
+                                                <p>Headline 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                </p>
+                                            </a>
+                                            <a class="mx-3" href="#">
+                                                <p>Headline 2: Integer vel erat vel enim varius tincidunt.</p>
+                                            </a>
+                                            <a class="mx-3" href="#">
+                                                <p>Headline 3: Proin vel erat vel enim varius tincidunt.</p>
+                                            </a>
+                                            <!-- Add more scroll items as needed -->
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
